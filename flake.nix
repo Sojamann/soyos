@@ -13,7 +13,6 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      user-config = import ./user-config.nix;
     in {
       home = { first-name, last-name, email, username }:
         home-manager.lib.homeManagerConfiguration {
