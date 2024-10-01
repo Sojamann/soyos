@@ -14,20 +14,13 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      home = { first-name, last-name, email, username }:
+      home = { user-config, extra-packages, }:
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ 
-            ./common/default.nix
-            ./systems/tower.nix
-          ];
+          modules = [ ./common/default.nix ];
           extraSpecialArgs = { 
-            user-config = {
-              inherit first-name;
-              inherit last-name;
-              inherit email;
-              inherit username;
-            };
+            inherit user-config;
+            inherit extra-packages;
           };
         };
       };
