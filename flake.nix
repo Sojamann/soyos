@@ -13,23 +13,18 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      user-config = import ./user-config.nix;
     in {
-      homeConfigurations."tower" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [ 
-          ./common/default.nix
-          ./systems/tower.nix
-        ];
-        extraSpecialArgs = { inherit user-config; };
+      home = {
+        user-config,
+        extra-packages,
+      }:
+        home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [ ./home/default.nix ];
+          extraSpecialArgs = {
+            inherit user-config;
+            inherit extra-packages;
+          };
+        };
       };
-      homeConfigurations."work" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [ 
-          ./common/default.nix
-          ./systems/work.nix
-        ];
-        extraSpecialArgs = { inherit user-config; };
-      };
-    };
 }

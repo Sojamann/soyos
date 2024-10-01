@@ -1,7 +1,9 @@
-{ config, pkgs, user-config, ... }:
+{ config, pkgs, user-config, extra-packages, ... }:
 let
 in
 {
+  targets.genericLinux.enable = true; # NON NIX OS
+
   home.username = user-config.username;
   home.homeDirectory = "/home/" + user-config.username;
 
@@ -32,7 +34,7 @@ in
 
     python312
     python312Packages.pip
-  ];
+  ] ++ extra-packages;
 
   
   imports = [
