@@ -21,7 +21,14 @@
             ./common/default.nix
             ./systems/tower.nix
           ];
-          extraSpecialArgs = { inherit user-config; };
+          extraSpecialArgs = { 
+            user-config = {
+              inherit first-name;
+              inherit last-name;
+              inherit email;
+              inherit username;
+            };
+          };
         };
       };
     };
