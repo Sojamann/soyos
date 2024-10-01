@@ -34,7 +34,7 @@ in
 
     python312
     python312Packages.pip
-  ] + extra-packages;
+  ] ++ extra-packages;
 
   
   imports = [
