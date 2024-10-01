@@ -15,21 +15,16 @@
       pkgs = nixpkgs.legacyPackages.${system};
       user-config = import ./user-config.nix;
     in {
-      homeConfigurations."tower" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [ 
-          ./common/default.nix
-          ./systems/tower.nix
-        ];
-        extraSpecialArgs = { inherit user-config; };
-      };
-      homeConfigurations."work" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [ 
-          ./common/default.nix
-          ./systems/work.nix
-        ];
-        extraSpecialArgs = { inherit user-config; };
+      home = { first-name, last-name, email, username }:
+        home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [ 
+            ./common/default.nix
+            ./systems/tower.nix
+          ];
+          extraSpecialArgs = { inherit user-config; };
+        };
       };
     };
+  };
 }
