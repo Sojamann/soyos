@@ -16,7 +16,7 @@
     in {
       home = {
         user-config,
-        extra-packages,
+        extra-packages ? [],
       }:
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
