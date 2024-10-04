@@ -44,5 +44,6 @@ in
     ./starship/starship.nix
     ./git/git.nix
     ./lf/default.nix
+    ./yazi/default.nix
   ];
 }
