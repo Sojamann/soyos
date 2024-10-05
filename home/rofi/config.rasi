@@ -1,0 +1,68 @@
+configuration {
+    terminal: "kitty";
+
+    modes: "combi,drun";
+
+    matching: "normal";
+    font: "monospace 11";
+    show-icons: true;
+    scroll-method: 0;
+    cycle: false;
+    fixed-num-lines: false;
+
+    window {
+        display-name: "window";
+        format: "<span fgalpha='65%'>[{w:-1}] </span><b>{c:-1}</b> <span weight='light' fgalpha='65%' size='small'>{t:-1}</span>";
+        thumbnail: false;
+    }
+
+    drun {
+        display-name: "drun";
+        url-launcher: "xdg-open";
+        match-fields: "name,generic,exec,categories,keywords";
+        display-format: "<b>{name}</b>[ <span weight='light' size='small'><i>({generic})</i></span>][ <span weight='light' fgalpha='65%' size='small'>{exec}</span>]";
+        show-actions: true;
+        
+        parse-user: true;
+        parse-system: true;
+    }
+
+    run {
+        display-name: "run";
+        command: "{cmd}";
+        list-command: "";
+        shell-command: "{terminal} -e {cmd}";
+    }
+
+    combi {
+        display-name: "combi";
+        modes: "window,drun";
+        hide-mode-prefix: false;
+        display-format: "<i>{mode}</i> {text}";
+    }
+
+    keys {
+        display-name: "keys";
+    }
+
+    windowcmd {
+        display-name: "windowcmd";
+    }
+
+    filebrowser {
+        display-name: "filebrowser";
+        directories-first: true;
+        sorting-method: "name";
+    }
+
+    ssh {
+        display-name: "ssh";
+    }
+
+    timeout {
+        action: "kb-cancel";
+        delay:  0;
+    }
+}
+
+@theme "theme"
