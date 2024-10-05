@@ -10,6 +10,9 @@
       "v"  = "nvim";
       "vd" = "nvim -d";
 
+      # yazi
+      "y" = "yazi";
+
       # git
       "gl"  =  "git log";
       "gs"  =  "git status";
