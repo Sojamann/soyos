@@ -28,12 +28,13 @@ in
     yq-go
     gum
 
-    # programming languages
+    # go
     go
 
+    # python
     python312
-    python312Packages.pip
-    python312Packages.requests
+    uv
+    ruff
   ] ++ extra-packages;
 
   

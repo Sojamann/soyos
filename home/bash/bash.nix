@@ -11,7 +11,7 @@
       "vd" = "nvim -d";
 
       # yazi
-      "y" = "yazi";
+      "ya" = "yazi";
 
       # git
       "gl"  =  "git log";
