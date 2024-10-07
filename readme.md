@@ -49,3 +49,6 @@ cd /path/to/flake/dir
 nix-shell -p home-manager
 home-manager switch --flake .
 ```
+
+## Optional
+- install kitty when wanting to use the kitty configuration
