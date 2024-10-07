@@ -46,5 +46,6 @@ in
     ./git/git.nix
     ./yazi/default.nix
     ./rofi/default.nix
+    ./kitty/default.nix
   ];
 }
