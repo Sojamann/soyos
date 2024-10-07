@@ -25,15 +25,15 @@ in
 
     # utility programs
     bat
-    yq
+    yq-go
     gum
-    lf
 
     # programming languages
     go
 
     python312
     python312Packages.pip
+    python312Packages.requests
   ] ++ extra-packages;
 
   
