@@ -10,5 +10,8 @@
     fzf
     gcc
     shellcheck
+
+    python312Packages.pylint
+    nodejs-slim_22
   ];
 }
