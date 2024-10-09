@@ -13,10 +13,7 @@
   outputs = { nixpkgs, home-manager, nixgl, ... }:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        overlays = [ nixgl.overlay ];
-      };
+      pkgs = nixpkgs.legacyPackages.${system};
     in {
       home = {
         user-config,
@@ -26,6 +23,7 @@
           inherit pkgs;
           modules = [ ./home/default.nix ];
           extraSpecialArgs = {
+            inherit nixgl;
             inherit user-config;
             inherit extra-packages;
           };
