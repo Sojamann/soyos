@@ -16,6 +16,17 @@ in
     EDITOR = "nvim";
   };
 
+  xgd.desktopEntries = {
+    testoo = {
+      name = "Firefox";
+      genericName = "Web Browser";
+      exec = "firefox %U";
+      terminal = false;
+      categories = [ "Application" "Network" "WebBrowser" ];
+      mimeType = [ "text/html" "text/xml" ];
+    };
+  };
+
   home.packages = with pkgs; [
     # basics
     git
