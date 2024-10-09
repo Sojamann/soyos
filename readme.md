@@ -18,7 +18,7 @@ echo 'extra-experimental-features = flakes nix-command' > ~/.config/nix/nix.conf
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
         soyos = {
-            url = "github:Sojamann/soyos/test";
+            url = "github:Sojamann/soyos/main";
             inputs.nixpkgs.follows = "nixpkgs";
         };
     };
