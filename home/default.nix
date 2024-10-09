@@ -46,6 +46,8 @@ in
     python312
     uv
     ruff
+
+    nixgl
   ] ++ extra-packages;
 
   
