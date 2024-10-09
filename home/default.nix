@@ -1,4 +1,4 @@
-{ config, pkgs, user-config, extra-packages, ... }:
+{ config, pkgs, user-config, extra-packages, nixgl, ... }:
 let
 in
 {
@@ -47,7 +47,10 @@ in
     uv
     ruff
 
-    nixgl
+    pkgs.writeShellScriptBin "alacritty" ''
+      #!/bin/sh
+      ${nixgl.auto.nixGLNvidia}/bin/nixGLNvidia ${pkgs.kitty}/bin/kitty "$@"
+    ''
   ] ++ extra-packages;
 
   
