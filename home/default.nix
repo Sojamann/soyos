@@ -16,7 +16,7 @@ in
     EDITOR = "nvim";
   };
 
-  xgd.desktopEntries = {
+  xdg.desktopEntries = {
     testoo = {
       name = "Firefox";
       genericName = "Web Browser";
