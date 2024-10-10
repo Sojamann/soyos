@@ -8,8 +8,8 @@ let
 in
 {
   home.file = {
-    ".config/alacitty/alacritty.toml".source = ./alacritty.toml;
-    ".config/alacitty/catppuccin-mocha.toml".source = ./catppuccin-mocha.toml;
+    ".config/alacritty/alacritty.toml".source = ./alacritty.toml;
+    ".config/alacritty/catppuccin-mocha.toml".source = ./catppuccin-mocha.toml;
   };
 
    home.packages = with pkgs; [
