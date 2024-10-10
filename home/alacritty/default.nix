@@ -3,7 +3,7 @@ let
   # until https://github.com/nix-community/home-manager/pull/5355 is merged
   nixalacritty = pkgs.writeShellScriptBin "nixalacritty" ''
     #!/bin/sh
-    nix run --impure github:nix-community/nixGL -- alacritty "$@"
+    nix run --impure github:nix-community/nixGL -- ${pkgs.alacritty}/bin/alacritty "$@"
   '';
 in
 {
