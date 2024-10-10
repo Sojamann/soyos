@@ -1,5 +1,9 @@
 { config, pkgs, user-config, extra-packages, nixgl, ... }:
 let
+  nixkitty = pkgs.writeShellScriptBin "nixkitty" ''
+    #!/bin/sh
+    nix run --impure github:nix-community/nixGL -- kitty "$@"
+  '';
 in
 {
   targets.genericLinux.enable = true; # NON NIX OS
@@ -37,10 +41,7 @@ in
     ruff
 
     # until https://github.com/nix-community/home-manager/pull/5355 is merged
-    pkgs.writeShellScriptBin "nixkitty" ''
-      #!/bin/sh
-      nix run --impure github:nix-community/nixGL -- kitty "$@"
-    ''
+    nixkitty
   ] ++ extra-packages;
 
   
