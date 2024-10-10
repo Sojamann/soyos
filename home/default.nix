@@ -16,17 +16,6 @@ in
     EDITOR = "nvim";
   };
 
-  xdg.desktopEntries = {
-    testoo = {
-      name = "Firefox";
-      genericName = "Web Browser";
-      exec = "firefox %U";
-      terminal = false;
-      categories = [ "Application" "Network" "WebBrowser" ];
-      mimeType = [ "text/html" "text/xml" ];
-    };
-  };
-
   home.packages = with pkgs; [
     # basics
     git
@@ -47,9 +36,10 @@ in
     uv
     ruff
 
-    pkgs.writeShellScriptBin "alacritty" ''
+    # until https://github.com/nix-community/home-manager/pull/5355 is merged
+    pkgs.writeShellScriptBin "nixkitty" ''
       #!/bin/sh
-      ${nixgl.auto.nixGLNvidia}/bin/nixGLNvidia ${pkgs.kitty}/bin/kitty "$@"
+      nix run --impure github:nix-community/nixGL -- kitty "$@"
     ''
   ] ++ extra-packages;
 
