@@ -14,5 +14,6 @@ in
 
    home.packages = with pkgs; [
     nixalacritty
+    alacritty
   ];
 }
