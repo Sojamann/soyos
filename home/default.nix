@@ -40,7 +40,7 @@ in
     pkgs.writeShellScriptBin "nixkitty" ''
       #!/bin/sh
       nix run --impure github:nix-community/nixGL -- kitty "$@"
-    ''
+    '';
   ] ++ extra-packages;
 
   
