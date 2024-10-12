@@ -1,8 +1,5 @@
-# TODO
-[ ] system packages ?
-[ ] fonts?     # fira-code
-    # fira-code-symbols
-    # nerdfonts
+# Requirements
+- Fira Code Nerd Font
 
 # STUFF
 1. Download Nix: https://nixos.org/download/
