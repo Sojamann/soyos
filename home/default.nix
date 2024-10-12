@@ -12,10 +12,6 @@ in
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  stylix.enable = true;
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
-  stylix.autoEnable = true;
-
   home.sessionVariables = {
     EDITOR = "nvim";
   };
@@ -50,6 +46,7 @@ in
     ./git/git.nix
     ./yazi/default.nix
     ./rofi/default.nix
+    ./stylix/default.nix
     ./alacritty/default.nix
   ];
 }

@@ -1,5 +1,5 @@
 # Requirements
-- Fira Code Nerd Font
+- rofi configured with HM (https://nix-community.github.io/home-manager/options.xhtml#opt-programs.rofi.enable)
 
 # STUFF
 1. Download Nix: https://nixos.org/download/

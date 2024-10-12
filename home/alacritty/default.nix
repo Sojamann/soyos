@@ -16,16 +16,11 @@ in
     enable = true;
     settings = {
       window = {
-        opacity = 0.8;
         decorations = "None";
         startup_mode = "Maximized";
       };
       env = {
         TERM = "xterm-256color";
-      };
-      font = {
-        size = 14.0;
-        normal.family = "FiraCode Nerd Font Mono";
       };
     };
   };
