@@ -7,9 +7,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix.url = "github:danth/stylix";
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, stylix, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -20,10 +21,11 @@
       }:
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ ./home/default.nix ];
+          modules = [ ./home/default.nix stylix.homeManagerModules.stylix ];
           extraSpecialArgs = {
             inherit user-config;
             inherit extra-packages;
+            inherit stylix;
           };
         };
       };
