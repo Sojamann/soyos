@@ -26,6 +26,9 @@
       "gb"  =  "git rev-parse --symbolic-full-name --abbrev-ref HEAD";
       "gbu" = "git branch --set-upstream-to=origin/$(gb) $(gb)";
 
+      # yazi
+      "y" = "yazi";
+
       # ls
       "lss" = "ls -la --sort=time";
 
