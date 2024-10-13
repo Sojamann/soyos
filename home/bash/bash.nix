@@ -12,16 +12,6 @@
       "poweroff"
       "shutdown"
     ];
-    shellOptions = [
-      # default
-      "histappend"
-      "checkwinsize"
-      "extglob"
-      "globstar"
-      "checkjobs"
-      # added
-      "vi"
-    ];
     shellAliases = {
       # nvim
       "v"  = "nvim";
