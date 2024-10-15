@@ -48,5 +48,6 @@ in
     ./rofi/default.nix
     ./stylix/default.nix
     ./alacritty/default.nix
+    ./readline/default.nix
   ];
 }
