@@ -1,8 +1,4 @@
 { pkgs, ...}: {
-  # home.file = {
-  #   ".tmux.conf".source = ./tmux.conf;
-  # };
-  #
   programs.tmux = {
     enable = true;
     baseIndex = 1;
@@ -86,9 +82,11 @@
       # ===       Popups       ===
       # ==========================
 
+      # style
+      set -g popup-border-style rounded
+
       # CTRL-s opens a scratch space
       bind C-s display-popup -E "bash #{pane_current_path}"
-
 
       # CTRL-o opens a repoitory in $HOME/Repos within a new session
       #
