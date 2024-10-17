@@ -83,7 +83,7 @@
       # ==========================
 
       # style
-      set -g popup-border-style rounded
+      set -g popup-border-lines rounded
 
       # CTRL-s opens a scratch space
       bind C-s display-popup -E "bash #{pane_current_path}"
