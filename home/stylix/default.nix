@@ -6,6 +6,8 @@
 
   # see: https://stylix.danth.me/options/hm.html
   stylix.autoEnable = true;
+  stylix.targets.gnome.enable = false;
+  stylix.targets.gtk.enable = false;
 
   stylix.fonts = {
     sizes.terminal = 14;
