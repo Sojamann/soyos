@@ -5,10 +5,12 @@
   stylix.image = ./wallpaper.jpg;
 
   # see: https://stylix.danth.me/options/hm.html
-  stylix.autoEnable = true;
-  stylix.targets.gnome.enable = false;
-  stylix.targets.gtk.enable = false;
-  sytlix.targets.kde.enable = false;
+  stylix.autoEnable = false;
+  stylix.targets.fzf.enable = true;
+  stylix.targets.bat.enable = true;
+  stylix.targets.alacritty.enable = true;
+  stylix.targets.tmux.enable = true;
+  stylix.targets.yazi.enable = true;
 
   stylix.fonts = {
     sizes.terminal = 14;
