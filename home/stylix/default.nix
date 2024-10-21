@@ -8,6 +8,7 @@
   stylix.autoEnable = true;
   stylix.targets.gnome.enable = false;
   stylix.targets.gtk.enable = false;
+  sytlix.targets.kde.enable = false;
 
   stylix.fonts = {
     sizes.terminal = 14;
