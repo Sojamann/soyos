@@ -37,6 +37,7 @@ return {
             lspconfig.zls.setup(ls_opt)
             lspconfig.lua_ls.setup(ls_opt)
             lspconfig.ols.setup(ls_opt)
+            lspconfig.rust_analyzer.setup(ls_opt)
 
             -- only enabled when npm is installed as this is a heavy
             -- dependency and these language servers are nice but not
