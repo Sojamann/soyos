@@ -11,6 +11,15 @@ return {
             -- ensures, that all servers mentioned in the config of
             -- 'neovim/nvim-lspconfig' are automaically installed
             automatic_installation = true,
+            ensure_installed = {
+                "gopls",
+                "nil_ls", -- nix
+                "zls",
+                "lua_ls",
+                "ols",
+                "rust_analyzer",
+                "bashls",
+            },
         },
     },
     {
@@ -43,7 +52,6 @@ return {
             -- dependency and these language servers are nice but not
             -- super important
             if vim.fn.executable('npm') == 1 then
-                lspconfig.pyright.setup(ls_opt)
                 lspconfig.bashls.setup(ls_opt)
             end
 

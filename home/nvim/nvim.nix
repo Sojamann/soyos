@@ -10,8 +10,9 @@
     fzf
     gcc
     shellcheck
+    cargo # also to build plugins
+    rustc
 
-    python312Packages.pylint
     nodejs-slim_22
   ];
 }
