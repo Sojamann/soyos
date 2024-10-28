@@ -10,8 +10,6 @@
     fzf
     gcc
     shellcheck
-    cargo # also to build plugins
-    rustc
 
     nodejs-slim_22
   ];
