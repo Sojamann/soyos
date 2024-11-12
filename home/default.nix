@@ -34,9 +34,6 @@ in
     # python tooling but not python itself
     uv
     ruff
-
-    # rust tooling
-    rustup
   ] ++ extra-packages;
 
   
