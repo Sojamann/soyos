@@ -6,11 +6,6 @@ return {
         end
     },
     {
-        'mrcjkb/rustaceanvim',
-        version = '^5',
-        lazy = false,
-    },
-    {
         "williamboman/mason-lspconfig.nvim",
         opts = {
             -- ensures, that all servers mentioned in the config of
@@ -23,6 +18,7 @@ return {
                 "ols",
                 "bashls",
                 "ruff_lsp",
+                "rust_analyzer",
             },
         },
     },
@@ -51,7 +47,7 @@ return {
             lspconfig.lua_ls.setup(ls_opt)
             lspconfig.ols.setup(ls_opt)
             lspconfig.ruff_lsp.setup(ls_opt)
-            -- NOTE: rust_analyzer is managed by rustaceanvim
+            lspconfig.rust_analyzer.setup(ls_opt)
 
             -- only enabled when npm is installed as this is a heavy
             -- dependency and these language servers are nice but not
