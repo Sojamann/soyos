@@ -13,7 +13,6 @@ return {
             automatic_installation = true,
             ensure_installed = {
                 "gopls",
-                "nil_ls", -- nix
                 "zls",
                 "lua_ls",
                 "ols",
