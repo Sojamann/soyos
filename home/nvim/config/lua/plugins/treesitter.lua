@@ -27,6 +27,7 @@ return {
                 "yaml",
                 "odin",
                 "zig",
+                "rust",
             },
             highlight = {
                 enabled = true,
