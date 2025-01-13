@@ -54,6 +54,7 @@ return {
             -- super important
             if vim.fn.executable('npm') == 1 then
                 lspconfig.bashls.setup(ls_opt)
+                lspconfig.pyright.setup(ls_opt)
             end
 
 
