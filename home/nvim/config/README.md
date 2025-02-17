@@ -1,11 +1,4 @@
-# TODO
-[ ] Debugging Zig
+# 💤 LazyVim
 
-[ ] Treesitter swapping
-
-[ ] Tell Mason to install stuff like pyright 
-    so that it is not complaining that stuff is missing 
-    which can be confusing.
-
-[ ] Try out neo-tree.nvim
-
+A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
