@@ -13,6 +13,7 @@ echo 'extra-experimental-features = flakes nix-command' > ~/.config/nix/nix.conf
 cd /path/to/flake/dir
 nix-shell -p home-manager
 home-manager switch --flake .#<home|work>
+git clone https://github.com/Sojamann/nvim.git ~/.config/nvim
 ```
 
 ## Optional
