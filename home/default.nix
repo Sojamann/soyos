@@ -1,11 +1,11 @@
-{ config, pkgs, user-config, extra-packages, ... }:
+{ config, pkgs, extra-packages, username, ... }:
 let
 in
 {
   targets.genericLinux.enable = true; # NON NIX OS
 
-  home.username = user-config.username;
-  home.homeDirectory = "/home/" + user-config.username;
+  home.username = username;
+  home.homeDirectory = "/home/" + username;
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
