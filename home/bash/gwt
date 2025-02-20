@@ -1,0 +1,96 @@
+# NOTE: this script is meant to be sourced
+
+#
+# HELPER
+#
+__gwt_usage() {
+  echo 'gwt cmd [args]
+
+    n|new           add a new worktree and branch
+    a|add           add a worktree based on a branch
+    s|switch        switch to another worktree
+    d|del|remove    remove worktree(s)
+    '
+}
+
+__gwt_get_root() {
+  git rev-parse --show-toplevel
+}
+
+__gwt_get_default_branch() {
+  git symbolic-ref refs/remotes/origin/HEAD --short 2>/dev/null || echo "main"
+}
+
+#
+# COMMANDS
+#
+
+__gwt_cmd_new() {
+  name="$(gum input)"
+  target="$(__gwt_get_root)/../${name}"
+
+  git worktree add -b "$name" "$target" &>/dev/null
+  git -C "$target" reset --hard $(__gwt_get_default_branch) &>/dev/null
+  cd "$target"
+}
+
+__gwt_cmd_switch() {
+  name=$(git worktree list | cut -f 1 -d ' ' | xargs -L1 basename | fzf --height 10)
+  cd "$(__gwt_get_root)/../${name}"
+}
+
+__gwt_cmd_add() {
+  # use local branches first since they show up instantly
+  # and remote branches are fetch in the background and added
+  # no remote name show's up since we are only interested
+  # in the name
+  name=$({
+    { git branch | tr -d '+*' | sed 's/^\s*//'; }
+    { git fetch &>/dev/null && git branch -r | sed 's/^\s*//' | cut -d ' ' -f 1 | cut -d '/' -f 2; }
+  } | fzf)
+
+  target="$(__gwt_get_root)/../${name}"
+  git worktree add -b "$name" "$target" "$name" &>/dev/null
+  cd "$(__gwt_get_root)/../${name}"
+}
+
+__gwt_cmd_delete() {
+  git worktree list |
+    cut -f 1 -d ' ' |
+    xargs -L1 basename |
+    gum choose --no-limit |
+    xargs -I{} git worktree remove -f "$(__gwt_get_root)/../{}"
+}
+
+gwt() {
+  if [[ $# -eq 0 ]]; then
+    __gwt_usage
+    return
+  fi
+  while [[ -n "$1" ]]; do
+    case "$1" in
+    n | new)
+      shift
+      __gwt_cmd_new
+      ;;
+    s | switch)
+      shift
+      __gwt_cmd_switch
+      ;;
+    a | add)
+      shift
+      __gwt_cmd_add
+      ;;
+    d | del | delete | remove)
+      shift
+      __gwt_cmd_delete
+      ;;
+    *)
+      __gwt_usage
+      break
+      ;;
+    esac
+  done
+}
+
+export -f gwt
