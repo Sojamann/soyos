@@ -39,7 +39,7 @@
       "k"    = "kubectl";
       "kuse" = "kubectl config use-context";
     };
-    initExtra = (builtins.readFile ./gwt) + ''
+    initExtra = (builtins.readFile ./gwt) + (builtins.readFile ./nvm) + ''
       command -v helm &>/dev/null && eval "$(helm completion bash)"
       command -v kubectl &>/dev/null && eval "$(kubectl completion bash)"
     '';

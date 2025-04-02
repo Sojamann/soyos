@@ -12,7 +12,5 @@
     fzf
     gcc
     shellcheck
-
-    nodejs-slim_22
   ];
 }

@@ -17,6 +17,7 @@
       home = {
         username,
         extra-packages ? [],
+        extra-env ? {},
       }:
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
@@ -24,6 +25,7 @@
           extraSpecialArgs = {
             inherit username;
             inherit extra-packages;
+            inherit extra-env;
             inherit stylix;
           };
         };
@@ -39,7 +41,11 @@
           extra-packages = with pkgs; [
               kubectl
               kubernetes-helm
+              odin
           ];
+          extra-env = {
+              BUNDLE_SYNCER_CONFIG = "~/Repos/files/bs/bs.json";
+          };
         };
     };
 }

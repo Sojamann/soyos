@@ -1,4 +1,4 @@
-{ config, pkgs, extra-packages, username, ... }:
+{ config, pkgs, extra-packages, extra-env, username, ... }:
 let
 in
 {
@@ -14,7 +14,7 @@ in
 
   home.sessionVariables = {
     EDITOR = "nvim";
-  };
+  } // extra-env;
 
   home.packages = with pkgs; [
     # basics
