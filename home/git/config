@@ -1,0 +1,73 @@
+# COMMAND CONFIG
+[init]
+    defaultBranch = main
+
+[status]
+    short = true
+    branch = true
+    showStath = true
+    showUntrackedFiles = all
+
+[diff]
+    context = 3
+    renames = copies
+    interHunkContext = 10 # merge near hunks in diffs
+
+[interactive]
+    singlekey = true
+
+[push]
+    autoSetupRemote = true
+
+[log]
+    abbrevCommit = true
+    graphColors = blue,yellow,cyan,magenta,green,red
+
+
+# MISC
+[core]
+    whitespace = error
+
+[advice]
+   statusHints = false
+
+[rebase]
+    autoStash = true
+    missingCommitsCheck = warn
+
+[pager]
+    diff = diff-so-fancy | ${PAGER:-less}
+
+[interactive]
+    diffFilter = diff-so-fancy --patch
+    singlekey = true
+
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = -taggerdate
+
+# COLORS
+[color "branch"]
+    current  = magenta
+    local    = default
+    remote   = yellow
+    upstream = green
+    plain    = blue
+
+[color "diff"]
+    meta        = black bold
+    frag        = magenta
+    context     = white
+    whitespace  = yellow reverse
+    old         = red
+
+# THIRD-PARTY
+[diff-so-fancy]
+    markEmptyLines = false
+
+# URL SHORTCUTS
+[url "git@github.com:"]
+    insteadOf = "gh:"
+

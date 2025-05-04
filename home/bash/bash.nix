@@ -18,7 +18,7 @@
       "vd" = "nvim -d";
 
       # git
-      "gl"  =  "git log";
+      "gl"  =  "git log --graph --all --pretty=format:\"%C(magenta)%h %C(white) %an  %ar%C(blue)  %D%n%s%n\"";
       "gs"  =  "git status";
       "gd"  =  "git diff";
       "gh"  =  "git show HEAD";

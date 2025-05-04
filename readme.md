@@ -15,6 +15,3 @@ nix-shell -p home-manager
 home-manager switch --flake .#<home|work>
 git clone https://github.com/Sojamann/nvim.git ~/.config/nvim
 ```
-
-## Optional
-- install kitty when wanting to use the kitty configuration
