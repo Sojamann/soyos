@@ -27,6 +27,7 @@ in
     bat
     yq-go
     gum
+    sd # find and replace
 
     # go
     go
