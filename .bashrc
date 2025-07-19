@@ -12,6 +12,8 @@ shopt -s extglob
 shopt -s globstar
 shopt -s checkjobs
 
+PATH="$PATH:/home/robin/.local/bin"
+
 alias gb='git rev-parse --symbolic-full-name --abbrev-ref HEAD'
 alias gbu='git branch --set-upstream-to=origin/$(gb) $(gb)'
 alias gd='git diff'
