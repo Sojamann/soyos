@@ -1,0 +1,56 @@
+#===========
+#   ENV
+#===========
+[env]
+EDITOR = "nvim"
+BUNDLE_SYNCER_CONFIG = "~/share/files/bs/bs.json"
+
+#===========
+# TOOLS
+#===========
+# installing tools with some duplicates since
+# the tools is used in general but also specifically
+# for example for neovim
+[tools]
+#==== terminal utilities ====
+"github:neovim/neovim" = "latest"
+starship = "1"
+yazi = "25"
+bat = "0.25"
+sd = "1"
+gum = "0.16"
+yq = "4"
+ripgrep = "14"
+fzf = "0.64"
+
+#==== neovim ====
+node = "24"
+shellcheck = "0.10.0"
+# fzf
+# ripgrep
+
+#==== python ====
+uv = "0.8.0"
+ruff = "0.12"
+"pipx:ty" = "latest"
+
+#==== golang ====
+go = "1.24"
+
+#==== odin ====
+odin = "dev-2025-07"
+
+#==== k8s ====
+kubectl = "1"
+helm = "3"
+k9s = "0.50"
+tmux = "latest"
+
+#===========
+# SETTINGS
+#===========
+[settings]
+activate_aggressive = true # prefer mise binaries over system binaries
+experimental = true
+lockfile = true
+
