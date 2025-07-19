@@ -28,7 +28,7 @@ alias pysource='source venv/bin/activate 2>/dev/null || source .venv/bin/activat
 alias v=nvim
 alias vd='nvim -d'
 alias y=yazi
-alias soyrepo='git --git-dir=$HOME/soyos/.git --work-tree=$HOME'
+alias config='git --git-dir=$HOME/.soyos --work-tree=$HOME'
 
 command -v helm &>/dev/null && eval "$(helm completion bash)"
 command -v kubectl &>/dev/null && eval "$(kubectl completion bash)"
