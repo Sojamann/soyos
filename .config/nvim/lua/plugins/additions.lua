@@ -36,4 +36,14 @@ return {
     ft = {"markdown"},
     opts = {},
   },
+  {
+    'developedbyed/marko.nvim',
+    event = "BufEnter",
+    opts = {
+      -- width = 100,
+      -- height = 100,
+      border = "rounded",
+      title = " Marks ",
+    }
+  }
 }
