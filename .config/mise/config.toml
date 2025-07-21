@@ -22,6 +22,8 @@ gum = "0.16"
 yq = "4"
 ripgrep = "14"
 fzf = "0.64"
+glow = "latest"
+tmux = "latest"
 
 #==== neovim ====
 node = "24"
@@ -44,7 +46,6 @@ odin = "dev-2025-07"
 kubectl = "1"
 helm = "3"
 k9s = "0.50"
-tmux = "latest"
 
 #===========
 # SETTINGS
