@@ -3,6 +3,7 @@
 #===========
 [env]
 EDITOR = "nvim"
+MANPAGER = "nvim +Man!" # use --clean if config gets too bloated
 BUNDLE_SYNCER_CONFIG = "~/share/files/bs/bs.json"
 
 #===========
