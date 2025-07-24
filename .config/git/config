@@ -44,20 +44,6 @@
 [tag]
     sort = -taggerdate
 
-# COLORS
-[color "branch"]
-    current  = magenta
-    local    = default
-    remote   = yellow
-    upstream = green
-    plain    = blue
-
-[color "diff"]
-    meta        = black bold
-    frag        = magenta
-    context     = white
-    whitespace  = yellow reverse
-    old         = red
 
 # URL SHORTCUTS
 [url "git@github.com:"]
