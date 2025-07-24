@@ -55,4 +55,5 @@ k9s = "0.50"
 activate_aggressive = true # prefer mise binaries over system binaries
 experimental = true
 lockfile = true
+idiomatic_version_file_enable_tools = ["python"]
 
