@@ -38,7 +38,7 @@ alias gbu='git branch --set-upstream-to=origin/$(gb) $(gb)'
 alias gd='git diff'
 alias gg='git pull --rebase'
 alias gh='git show HEAD'
-alias gl='git log --graph --all --pretty=format:"%C(magenta)%h %C(white) %an  %ar%C(blue)  %D%n%s%n"'
+alias gl='git log'
 alias gs='git status'
 
 # K8S
