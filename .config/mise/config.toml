@@ -31,6 +31,7 @@ fzf = "0.64"
 ripgrep = "14"
 "npm:bash-language-server" = "latest"
 lua-language-server = "latest"
+"pipx:python-lsp-server" = "latest"
 
 #==== python ====
 uv = "0.8.0"

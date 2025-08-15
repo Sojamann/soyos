@@ -97,3 +97,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map('n', '<leader>q', vim.diagnostic.setloclist, opts)
   end,
 })
+
+-- GitSigns
+
+map('n', '<leader>gb', "<CMD>Gitsigns blame<CR>")

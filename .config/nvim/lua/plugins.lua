@@ -35,6 +35,7 @@ vim.pack.add({
   -- Commenting Utility
   --  > gcc or gc
   { src = "https://github.com/echasnovski/mini.comment" },
+  { src = "https://github.com/lewis6991/gitsigns.nvim" },
 })
 
 -- ==============================
@@ -45,6 +46,7 @@ require("mini.pick").setup()
 require("mini.extra").setup()
 require("mini.comment").setup()
 require("mini.move").setup()
+require("gitsigns").setup({})
 
 require("oil").setup({
   dim_inactive = {
@@ -64,6 +66,7 @@ vim.lsp.enable({
   "lua_ls",
   "bash-language-server",
   "ty",
+  "pylsp",
   "gopls",
   "zls",
 })
