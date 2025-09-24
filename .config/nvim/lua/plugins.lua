@@ -36,6 +36,8 @@ vim.pack.add({
   --  > gcc or gc
   { src = "https://github.com/echasnovski/mini.comment" },
   { src = "https://github.com/lewis6991/gitsigns.nvim" },
+  -- TODO highlighting
+  { src = "https://github.com/folke/todo-comments.nvim" },
 })
 
 -- ==============================
@@ -47,6 +49,7 @@ require("mini.extra").setup()
 require("mini.comment").setup()
 require("mini.move").setup()
 require("gitsigns").setup({})
+require("todo-comments").setup({})
 
 require("oil").setup({
   dim_inactive = {
