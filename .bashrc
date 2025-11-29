@@ -17,8 +17,6 @@ shopt -s globstar
 shopt -s checkjobs
 
 
-PATH="$PATH:$HOME/.local/bin"
-
 #================
 # ALIASES
 #================
@@ -45,6 +43,12 @@ alias gs='git status'
 alias k=kubectl
 alias kuse='kubectl config use-context'
 
+
+
+#=======================
+# ACTIVATE HOMEBREW ENV
+#=======================
+test -x /opt/homebrew/bin/brew && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 #================
 # COMPLETION

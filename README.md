@@ -10,22 +10,20 @@ config checkout # remove conflicting files if there are errors
 
 Install dependencies:
 ```bash
-# Install Terminal (+deps to build tmux)
-dnf install alacritty gcc ncurses-devel bison
+# install grapical tools
+brew install --cask ghostty
+# install other shizzle
+brew install \
+	mise \
+	tmux starship yazi fd sd bat yq fzf ripgrep \
+	shellcheck node \
+	kubectl k9s helm
+# install nightly of neovim
+brew install neovim --HEAD
 
-# hyperland dependencies
-dnf install \
-    hyprland \
-    hyprpaper \
-    hyprlock \
-    waybar \
-    wofi
-
-# install dev dependencies
-curl https://mise.run | sh
-source ~/.bashrc # source again now that mise is available
 mise install
 ```
+
 
 Get the fonts:
 ```bash

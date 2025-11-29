@@ -4,53 +4,23 @@
 [env]
 EDITOR = "nvim"
 MANPAGER = "nvim +Man!" # use --clean if config gets too bloated
-BUNDLE_SYNCER_CONFIG = "~/share/files/bs/bs.json"
 
 #===========
 # TOOLS
 #===========
-# installing tools with some duplicates since
-# the tools is used in general but also specifically
-# for example for neovim
-[tools]
-#==== terminal utilities ====
-"github:neovim/neovim" = "nightly"
-starship = "1"
-yazi = "25"
-bat = "0.25"
-sd = "1"
-gum = "0.16"
-yq = "4"
-glow = "latest"
-tmux = "latest"
 
 #==== neovim ====
-node = "24"
-shellcheck = "0.10.0"
-fzf = "0.64"
-ripgrep = "14"
-"npm:bash-language-server" = "latest"
+#"npm:bash-language-server" = "latest" # TODO: comment back in this was a MISE bug
 lua-language-server = "latest"
-"pipx:python-lsp-server" = "latest"
 
 #==== python ====
-uv = "0.8.0"
-ruff = "0.12"
-"pipx:ty" = "latest"
+uv = "0.9"
+ruff = "0.14"
+#"pipx:ty" = "latest" # TODO: comment back in... this was a MISE bug
 
 #==== golang ====
-go = "1.24"
-"go:golang.org/x/tools/gopls" = "0.19"
-
-#==== odin ====
-odin = "dev-2025-07"
-"github:DanielGavin/ols" = "nightly"
-
-#==== k8s ====
-kubectl = "1"
-helm = "3"
-k9s = "0.50"
-fd = "latest"
+go = "1.25"
+#"go:golang.org/x/tools/gopls" = "0.20" # TODO: comment back in this was a MISE bug
 
 #===========
 # SETTINGS
