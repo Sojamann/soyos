@@ -11,7 +11,7 @@ MANPAGER = "nvim +Man!" # use --clean if config gets too bloated
 
 #==== neovim ====
 #"npm:bash-language-server" = "latest" # TODO: comment back in this was a MISE bug
-lua-language-server = "latest"
+#lua-language-server = "latest" # TODO: comment back in this was a MISE bug
 
 #==== python ====
 uv = "0.9"
