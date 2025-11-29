@@ -1,0 +1,8 @@
+command = /opt/homebrew/bin/bash --login
+shell-integration = bash
+
+theme = Catppuccin Mocha
+font-size = 18
+
+#maximize = true
+#fullscreen = true
