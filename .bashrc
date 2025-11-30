@@ -49,6 +49,7 @@ alias kuse='kubectl config use-context'
 # ACTIVATE HOMEBREW ENV
 #=======================
 test -x /opt/homebrew/bin/brew && eval "$(/opt/homebrew/bin/brew shellenv)"
+PATH="$HOME/.local/bin:$PATH"
 
 #================
 # COMPLETION
