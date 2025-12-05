@@ -11,7 +11,7 @@ config checkout # remove conflicting files if there are errors
 Install dependencies:
 ```bash
 # install grapical tools
-brew install --cask ghostty
+brew install --cask ghostty aldente raycast
 # install other shizzle
 brew install \
 	mise \
