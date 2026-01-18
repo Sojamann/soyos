@@ -24,6 +24,9 @@ brew install \
 # install nightly of neovim
 brew install neovim --HEAD
 
+# install development toolchains (no specific language versions)
+brew install uv
+
 mise install
 ```
 
