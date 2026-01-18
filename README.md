@@ -10,6 +10,9 @@ config checkout # remove conflicting files if there are errors
 
 Install dependencies:
 ```bash
+# install essentialls
+brew install git 7zip
+
 # install grapical tools
 brew install --cask ghostty aldente raycast
 # install other shizzle
