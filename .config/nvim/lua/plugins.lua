@@ -72,6 +72,7 @@ vim.lsp.enable({
   "pylsp",
   "gopls",
   "zls",
+  "terraformls"
 })
 
 require("nvim-treesitter.configs").setup({

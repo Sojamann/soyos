@@ -56,6 +56,7 @@ PATH="$HOME/.local/bin:$PATH"
 #================
 
 command -v mise &>/dev/null && eval "$(mise activate bash)"
+command -v mise &>/dev/null && eval "$(mise completion bash --include-bash-completion-lib)"
 command -v starship &>/dev/null && eval "$(starship init bash)"
 
 command -v kubectl &>/dev/null && eval "$(kubectl completion bash)"
