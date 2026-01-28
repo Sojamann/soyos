@@ -14,7 +14,7 @@ Install dependencies:
 brew install git 7zip
 
 # install grapical tools
-brew install --cask ghostty aldente raycast
+brew install --cask ghostty aldente docker
 # install other shizzle
 brew install \
 	mise \
@@ -30,14 +30,7 @@ brew install uv
 mise install
 ```
 
-
-Get the fonts:
 ```bash
-curl -L https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.tar.xz \
-    | tar -Jxf- -C ~/.local/share/fonts --strip-components 1
-fc-cache -vf
-fc-list # to verify
-
 # start tmux and press CTRL+SPACE+I
 ```
 
