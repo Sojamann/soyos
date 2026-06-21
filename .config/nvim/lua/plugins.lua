@@ -13,7 +13,7 @@ vim.pack.add({
   -- Syntax Parser
   {
     src = "https://github.com/nvim-treesitter/nvim-treesitter",
-    version = vim.version.range("0.10.0"),
+    version = "main"
   },
   -- Statusline
   { src = "https://github.com/nvim-lualine/lualine.nvim" },
@@ -26,6 +26,8 @@ vim.pack.add({
   },
   -- Picker
   -- > shift + tab for help
+  -- > ctrl + x for marking lines
+  -- > option + enter for add marked items to quickfix list
   { src = "https://github.com/echasnovski/mini.pick" },
   -- Extra Pickers
   { src = "https://github.com/echasnovski/mini.extra" },
@@ -75,29 +77,26 @@ vim.lsp.enable({
   "terraformls"
 })
 
-require("nvim-treesitter.configs").setup({
-  ensure_installed = {
-    -- general
-    "vim",
-    "vimdoc",
-    "markdown",
-    "markdown_inline",
-    "dockerfile",
-    "diff",
+require("nvim-treesitter")
+require('nvim-treesitter').install {
+  -- general
+  "vim",
+  "vimdoc",
+  "markdown",
+  "markdown_inline",
+  "dockerfile",
+  "diff",
 
-    -- programming languages
-    "lua",
-    "bash",
-    "odin",
-    "go",
-    "python",
-    "zig",
-    "rust",
-    "c",
-  },
-  auto_install = true,
-  highlight = { enable = true },
-})
+  -- programming languages
+  "lua",
+  "bash",
+  "odin",
+  "go",
+  "python",
+  "zig",
+  "rust",
+  "c",
+}
 
 require("blink.cmp").setup({
   signature = { enabled = true },

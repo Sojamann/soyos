@@ -14,12 +14,12 @@ Install dependencies:
 brew install git 7zip
 
 # install grapical tools
-brew install --cask ghostty aldente docker
+brew install --cask ghostty aldente docker modem-dev/tap/hunk
 # install other shizzle
 brew install \
 	mise \
 	tmux starship yazi fd sd bat yq fzf ripgrep \
-	shellcheck node \
+	shellcheck tree-sittercli node \
 	kubectl k9s helm
 # install nightly of neovim
 brew install neovim --HEAD

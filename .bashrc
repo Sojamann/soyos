@@ -43,6 +43,10 @@ alias gs='git status'
 alias k=kubectl
 alias kuse='kubectl config use-context'
 
+# CLUADE
+alias claude-personal='CLAUDE_CONFIG_DIR=~/.claude-personal command claude'
+alias claude-work='CLAUDE_CONFIG_DIR=~/.claude-work command claude'
+alias claude='echo use "claude-work" or "claude-personal" instead'
 
 
 #=======================
