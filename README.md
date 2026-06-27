@@ -18,7 +18,7 @@ brew install --cask ghostty aldente docker modem-dev/tap/hunk
 # install other shizzle
 brew install \
 	mise \
-	tmux starship yazi fd sd bat yq fzf ripgrep \
+	herdr starship yazi fd sd bat yq fzf ripgrep \
 	shellcheck tree-sittercli node \
 	kubectl k9s helm
 # install nightly of neovim
@@ -29,8 +29,3 @@ brew install uv
 
 mise install
 ```
-
-```bash
-# start tmux and press CTRL+SPACE+I
-```
-

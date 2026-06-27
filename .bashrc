@@ -48,6 +48,8 @@ alias claude-personal='CLAUDE_CONFIG_DIR=~/.claude-personal command claude'
 alias claude-work='CLAUDE_CONFIG_DIR=~/.claude-work command claude'
 alias claude='echo use "claude-work" or "claude-personal" instead'
 
+# GENERAL
+alias md='glow --pager'
 
 #=======================
 # ACTIVATE HOMEBREW ENV
