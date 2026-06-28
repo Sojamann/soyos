@@ -45,7 +45,6 @@ vim.opt.pumblend = 10                              -- Popup menu transparency
 vim.opt.winblend = 0                               -- Floating window transparency 
 vim.opt.conceallevel = 0                           -- Don't hide markup 
 vim.opt.concealcursor = ""                         -- Don't hide cursor line markup 
-vim.opt.lazyredraw = true                          -- Don't redraw during macros
 vim.opt.synmaxcol = 300                            -- Syntax highlighting limit 
 
 -- File handling
@@ -80,13 +79,9 @@ vim.opt.splitright = true                          -- Vertical splits go right
 -- Better LSP UI
 vim.diagnostic.config({
   virtual_text = { prefix = '●' },
-  signs = true,
   underline = true,
   update_in_insert = false,
   severity_sort = true,
-})
-
-vim.diagnostic.config({
   signs = {
     text = {
       [vim.diagnostic.severity.ERROR] = "✗",
@@ -94,5 +89,5 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.INFO] = "ℹ",
       [vim.diagnostic.severity.HINT] = "💡",
     }
-  }
+  },
 })

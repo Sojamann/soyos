@@ -7,7 +7,7 @@ map("n", "qq", ":quit<CR>")
 map("n", "<tab><tab>", "<CMD>Oil<CR>", { desc = "Opens filetree" })
 
 -- Yanking
-map({ 'n', 'v', 'x' }, '<leader>y', '"+y<CR>')
+map({ 'n', 'v', 'x' }, '<leader>y', '"+y')
 
 -- Center screen when jumping
 map("n", "n", "nzzzv", { desc = "Next search result (centered)" })
@@ -16,7 +16,7 @@ map("n", "<C-d>", "<C-d>zz", { desc = "Half page down (centered)" })
 map("n", "<C-u>", "<C-u>zz", { desc = "Half page up (centered)" })
 
 -- Delete without yanking
-map({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without yanking" })
+map({ "n", "v" }, "<leader>D", '"_d', { desc = "Delete without yanking" })
 
 -- Better window navigation
 map("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
@@ -68,13 +68,15 @@ vim.keymap.set("n", "<leader>pa", function()
 	print("file:", path)
 end)
 
--- LSP keymaps 
+-- Formatting (conform with LSP fallback)
+map('n', '<leader>f', function()
+  require("conform").format({ lsp_fallback = true })
+end, { desc = "Format buffer" })
+
+-- LSP keymaps
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(event)
     local opts = {buffer = event.buf}
-
-    -- Formatting
-    map('n', '<leader>f', vim.lsp.buf.format)
 
     -- Navigation
     map('n', 'gd', vim.lsp.buf.definition, opts)

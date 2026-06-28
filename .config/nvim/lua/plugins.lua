@@ -40,12 +40,16 @@ vim.pack.add({
   { src = "https://github.com/lewis6991/gitsigns.nvim" },
   -- TODO highlighting
   { src = "https://github.com/folke/todo-comments.nvim" },
+  -- Formatter
+  { src = "https://github.com/stevearc/conform.nvim" },
+  -- Treesitter context
+  { src = "https://github.com/nvim-treesitter/nvim-treesitter-context" },
 })
 
 -- ==============================
 -- PLUGIN SETUP
 -- ==============================
-require("lualine").setup()
+require("lualine").setup({ options = { theme = "catppuccin" } })
 require("mini.pick").setup()
 require("mini.extra").setup()
 require("mini.comment").setup()
@@ -54,10 +58,6 @@ require("gitsigns").setup({})
 require("todo-comments").setup({})
 
 require("oil").setup({
-  dim_inactive = {
-    enabled = true,
-    percentage = 0.10,
-  },
   view_options = { show_hidden = true }
 })
 
@@ -97,6 +97,22 @@ require('nvim-treesitter').install {
   "rust",
   "c",
 }
+
+require("treesitter-context").setup()
+
+require("conform").setup({
+  formatters_by_ft = {
+    lua        = { "stylua" },
+    go         = { "goimports" },
+    python     = { "ruff_format" },
+    sh         = { "shfmt" },
+    bash       = { "shfmt" },
+    terraform  = { "terraform_fmt" },
+    zig        = { "zigfmt" },
+    markdown   = { "prettier" },
+  },
+  default_format_opts = { lsp_fallback = true },
+})
 
 require("blink.cmp").setup({
   signature = { enabled = true },
