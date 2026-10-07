@@ -90,12 +90,45 @@ key = "prefix+p"
 type = "pane"  # shell (detached in background) | pane (temporary pane)
 command = "/Users/robinbergewski/.config/herdr/scripts/yazi-workspace.sh"
 
+[[keys.command]]
+key = "prefix+s"
+type = "popup"
+command = "cd \"${HERDR_ACTIVE_PANE_CWD?}\" && exec \"${SHELL:-sh}\""
+description = "open scratch terminal"
+width = "80%"
+height = "80%"
+
+[[keys.command]]
+key = "prefix+f"
+type = "popup"
+command = "cd \"${HERDR_ACTIVE_PANE_CWD?}\" && exec yazi"
+description = "open filepicker"
+width = "80%"
+height = "80%"
+
+[[keys.command]]
+key = "prefix+w"
+type = "popup"
+command = "TODO_FILE=\"${HOME}/wRepos/todo.txt\" tuxedo"
+description = "open work todos"
+width = "90%"
+height = "90%"
+
+[[keys.command]]
+key = "prefix+t"
+type = "popup"
+command = "tuxedo"
+description = "open work todos"
+width = "90%"
+height = "90%"
+
 [ui]
 # Capture mouse input for Herdr's mouse UI.
 # Set false to let the terminal handle normal clicks, such as Cmd-clicking URLs.
 # Pane apps like lazygit and btop can still receive mouse when they request it.
 mouse_capture = true
 
+agent_panel_sort = "spaces"
 [ui.sound]
 enabled = false
 

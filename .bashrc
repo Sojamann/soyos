@@ -18,13 +18,23 @@ shopt -s checkjobs
 
 
 #================
+# HELPERS
+#================
+function y() { # YAZI
+	local tmp cwd; tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd" || builtin true
+	command rm -f -- "$tmp"
+}
+
+#================
 # ALIASES
 #================
 
 alias config='git --git-dir=$HOME/.soyos --work-tree=$HOME'
 
 # SHELL SHIZZLE
-alias y=yazi
 alias v=nvim
 alias vd='nvim -d'
 alias lss='ls -la --sort=time'
@@ -49,7 +59,9 @@ alias claude-work='CLAUDE_CONFIG_DIR=~/.claude-work command claude'
 alias claude='echo use "claude-work" or "claude-personal" instead'
 
 # GENERAL
-alias md='glow --pager'
+alias md='ink --remote-images --watch'
+alias github='command gh'
+alias wtodo='TODO_FILE=$HOME/wRepos/todo.txt tuxedo'
 
 #=======================
 # ACTIVATE HOMEBREW ENV
