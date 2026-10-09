@@ -3,3 +3,14 @@ on   = "!"
 for  = "unix"
 run  = 'shell "$SHELL" --block'
 desc = "Open shell here"
+
+# Search incl. gitignored files; junk excluded via ~/.config/fd/ignore
+[[mgr.prepend_keymap]]
+on   = "s"
+run  = "search --via=fd --args='--no-ignore-vcs'"
+desc = "Search files by name via fd (incl. gitignored)"
+
+[[mgr.prepend_keymap]]
+on   = "S"
+run  = "search --via=rg --args='--no-ignore-vcs --ignore-file /Users/robinbergewski/.config/fd/ignore'"
+desc = "Search files by content via rg (incl. gitignored)"

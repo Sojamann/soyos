@@ -1,0 +1,17 @@
+# Global fd ignores (also used by yazi's rg search via --ignore-file).
+# Applies even with --no-ignore-vcs, so gitignored scratch dirs stay searchable.
+.git/
+node_modules/
+.venv/
+venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.terraform/
+.next/
+.cache/
+target/
+dist/
+build/
+.DS_Store
