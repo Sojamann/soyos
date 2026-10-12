@@ -14,3 +14,13 @@ desc = "Search files by name via fd (incl. gitignored)"
 on   = "S"
 run  = "search --via=rg --args='--no-ignore-vcs --ignore-file /Users/robinbergewski/.config/fd/ignore'"
 desc = "Search files by content via rg (incl. gitignored)"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "y" ]
+run  = 'shell -- cat %s | pbcopy'
+desc = "Copy file contents to clipboard"
+
+[[mgr.prepend_keymap]]
+on   = "<C-v>"
+run  = "plugin paste-clip"
+desc = "Paste clipboard into new file"
